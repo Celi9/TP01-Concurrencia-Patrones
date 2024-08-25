@@ -1,0 +1,31 @@
+package backend.enidades;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+public interface Builder implements KeyListener {
+	
+	private final int[][] mapa;
+	private final NivelDificultad dificultad;
+	private final int velocidadPACMAN;
+	private final int velocidadFANTASMA;
+	private final int canFantasmasMax;
+	private final int canFantasmasInicial;
+	private int puntaje;
+	
+	
+	@Override
+	public void keyTyped(KeyEvent e) {
+		
+	}
+	@Override
+	public void keyPressed(KeyEvent e) {
+		
+	}
+	@Override
+	public void keyReleased(KeyEvent e) {
+		
+	}
+    	
+	
+
+}

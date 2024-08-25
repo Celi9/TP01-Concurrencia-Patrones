@@ -1,0 +1,8 @@
+package backend.enidades;
+
+public interface PersonajeBuilder {
+	
+	void setCantVidas();
+	void setVelocidad();	
+
+}

@@ -1,0 +1,2 @@
+INDEX VERSION 1.4+C:\Users\Usuario\Documents\Backup 2021\Celina\Universidad\3 er anio\2 do Cuatrimestre\Laboratorio de Programación\TP 1\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1965174767.index

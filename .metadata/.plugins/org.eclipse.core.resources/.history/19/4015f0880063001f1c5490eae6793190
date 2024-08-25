@@ -1,0 +1,15 @@
+package backend.enidades;
+
+public interface Builder {
+	
+	                            
+	void setAlto();               
+	void setAncho();               
+	void setMapa();               
+	void setDificultad();
+	void setCantFantasmasMax();
+	void setCantFantasmasInicial();
+	void setPuntaje();  	
+	
+
+}

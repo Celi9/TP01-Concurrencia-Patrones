@@ -1,0 +1,26 @@
+package backend.enidades;
+
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
+public class Juego implements Runnable {
+	private ScheduledExecutorService executor;
+	private Mapa mapa;
+	private PacMan pacman;
+	private Fantasma[] fantasma;
+	
+	public Juego() {
+		executor = Executors.newSingleThreadScheduledExecutor();
+		executor.scheduleAtFixedRate(this,(long) 0, (long) 16, TimeUnit.MILLISECONDS);
+		
+	}
+	
+	private inicializarMenu() {
+		
+	}
+	
+	private void actualizarJuego() {
+		
+	}
+}

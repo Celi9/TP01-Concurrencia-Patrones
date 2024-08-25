@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+C:\Users\Usuario\Documents\Backup 2021\Celina\Universidad\3 er anio\2 do Cuatrimestre\Laboratorio de Programación\tp1\TP01-Concurrencia-Patrones\.metadata\.plugins\org.eclipse.jdt.core
+512459663.index
+1965174767.index
+223218878.index
+23720165.index

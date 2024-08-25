@@ -1,0 +1,5 @@
+package backend.enidades;
+
+public enum CeldaType {
+	CELDA_POZO, VIENTO, NORMAL, VILLANO
+}

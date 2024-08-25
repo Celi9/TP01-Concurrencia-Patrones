@@ -1,0 +1,15 @@
+package backend.enidades;
+
+import java.awt.Image;
+
+import javax.swing.JPanel;
+
+public class Celda extends JPanel {
+
+	private CeldaType tipo;
+	private Image imagen;
+	
+	
+	
+	
+}

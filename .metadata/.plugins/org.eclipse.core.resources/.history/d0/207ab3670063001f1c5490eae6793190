@@ -1,0 +1,13 @@
+package backend.enidades;
+
+import javax.swing.JPanel;
+
+public class MapaBuilder extends JPanel implements Builder {
+	
+	private int ancho;
+	private int alto;
+	private Celda[][] mapa;
+	
+	
+
+}

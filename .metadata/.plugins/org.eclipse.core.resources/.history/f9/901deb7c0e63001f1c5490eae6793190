@@ -1,0 +1,13 @@
+package backend.enidades;
+
+import javax.swing.JPanel;
+
+public class Fantasma extends JPanel implements Runnable {
+
+	@Override
+	public void run() {
+		
+		
+	}
+
+}

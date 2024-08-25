@@ -1,0 +1,50 @@
+package backend.enidades;
+
+import javax.swing.JPanel;
+
+public class MapaBuilder extends JPanel implements Builder {
+	
+	private int ancho;
+	private int alto;
+	private Celda [][] mapa;
+	private NivelDificultad dificultad;
+	private int canFantasmasMax;
+	private int canFantasmasInicial;
+	private int puntaje;
+	private Pacman pacman;
+	private Fantasma [] fantasmas;
+	
+	
+	public void setAncho(int ancho) {
+		this.ancho = ancho;
+	}
+	public void setAlto(int alto) {
+		this.alto = alto;
+	}
+	public void setMapa(Celda[][] mapa) {
+		this.mapa = mapa;
+	}
+	public void setDificultad(NivelDificultad dificultad) {
+		this.dificultad = dificultad;
+	}
+	public void setCanFantasmasMax(int canFantasmasMax) {
+		this.canFantasmasMax = canFantasmasMax;
+	}
+	public void setCanFantasmasInicial(int canFantasmasInicial) {
+		this.canFantasmasInicial = canFantasmasInicial;
+	}
+	public void setPuntaje(int puntaje) {
+		this.puntaje = puntaje;
+	}
+	public void setPacman(Pacman pacman) {
+		this.pacman = pacman;
+	}
+	public void setFantasmas(Fantasma[] fantasmas) {
+		this.fantasmas = fantasmas;
+	}
+	
+	
+	
+	
+
+}

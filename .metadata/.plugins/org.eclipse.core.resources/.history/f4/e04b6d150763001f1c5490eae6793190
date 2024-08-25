@@ -1,0 +1,17 @@
+package backend.enidades;
+
+public class Mapa  {
+	
+	private final int ancho;
+	private final int alto;
+	private final Celda [][] mapa;
+	private final NivelDificultad dificultad;
+	private final int canFantasmasMax;
+	private final int canFantasmasInicial;
+	private final int puntaje;
+	private final Pacman pacman;
+	private final Fantasma [] fantasmas;
+	
+	
+
+}

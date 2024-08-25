@@ -1,0 +1,9 @@
+package backend.enidades;
+
+public class Celda {
+
+	private String tipo;
+	private Object elto;
+	
+	
+}

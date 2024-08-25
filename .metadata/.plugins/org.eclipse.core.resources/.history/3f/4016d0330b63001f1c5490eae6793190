@@ -1,0 +1,10 @@
+package backend.enidades;
+
+public class Celda {
+
+	private CeldaType tipo;
+	
+	
+	
+	
+}

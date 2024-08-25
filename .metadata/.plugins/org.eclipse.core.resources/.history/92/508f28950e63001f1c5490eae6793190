@@ -1,0 +1,12 @@
+package backend.enidades;
+
+import javax.swing.JPanel;
+
+public class PacMan extends JPanel implements Runnable {
+
+	@Override
+	public void run() {
+		
+	}
+
+}

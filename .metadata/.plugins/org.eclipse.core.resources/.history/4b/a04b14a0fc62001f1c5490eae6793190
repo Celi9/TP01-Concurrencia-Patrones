@@ -1,0 +1,11 @@
+package backend.enidades;
+
+public class MapaBuilder {
+	
+	private int ancho;
+	private int alto;
+	private Celda[][] mapa;
+	
+	
+
+}
