@@ -1,89 +1,34 @@
 package backend.enidades;
-import javax.swing.JPanel;
 
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.util.Timer;
+public class Mapa {
+    private final int[][] mapa;
+    private final int filas;
+    private final int columnas;
 
-public class Mapa  extends JPanel implements KeyListener {
-	
-	private final int ancho;
-	private final int alto;
-	private final Celda [][] mapa;
-	private final NivelDificultad dificultad;
-	private final int canFantasmasMax;
-	private final PacMan pacman;
-	private final Fantasma [] fantasmas;
-	private int canFantasmasInicial;
-	private int puntaje;	
-	private Timer timer;
-	
-	public Mapa(int ancho, int alto, Celda[][] mapa, NivelDificultad dificultad, int canFantasmasMax,
-			int canFantasmasInicial, int puntaje, PacMan pacman, Fantasma[] fantasmas) {
-		
-		this.ancho = ancho;
-		this.alto = alto;
-		this.mapa = mapa;
-		this.dificultad = dificultad;
-		this.canFantasmasMax = canFantasmasMax;
-		this.canFantasmasInicial = canFantasmasInicial;
-		this.puntaje = puntaje;
-		this.pacman = pacman;
-		this.fantasmas = fantasmas;
-	}
+    public Mapa(int[][] mapa, int filas, int columnas) {
+        this.filas = filas;
+        this.columnas = columnas;
+        this.mapa = mapa;
+    }
 
-	public int getAncho() {
-		return ancho;
-	}
+    public int[][] getMapa() {
+        return mapa;
+    }
 
-	public int getAlto() {
-		return alto;
-	}
+    public int getFilas() {
+        return filas;
+    }
 
-	public Celda[][] getMapa() {
-		return mapa;
-	}
+    public int getColumnas() {
+        return columnas;
+    }
 
-	public NivelDificultad getDificultad() {
-		return dificultad;
-	}
-
-	public int getCanFantasmasMax() {
-		return canFantasmasMax;
-	}
-
-	public int getCanFantasmasInicial() {
-		return canFantasmasInicial;
-	}
-
-	public int getPuntaje() {
-		return puntaje;
-	}
-
-	public PacMan getPacman() {
-		return pacman;
-	}
-
-	public Fantasma[] getFantasmas() {
-		return fantasmas;
-	}
-
-	@Override
-	public void keyTyped(KeyEvent e) {
-		
-	}
-
-	@Override
-	public void keyPressed(KeyEvent e) {
-		
-	}
-
-	@Override
-	public void keyReleased(KeyEvent e) {
-		
-	}
-	
-	
-	
-
+    public void mostrarMapa() {
+        for (int i = 0; i < filas; i++) {
+            for (int j = 0; j < columnas; j++) {
+                System.out.print(mapa[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
 }
