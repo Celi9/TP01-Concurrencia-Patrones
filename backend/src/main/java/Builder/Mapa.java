@@ -1,17 +1,17 @@
 package Builder;
 
 public class Mapa {
-    private final char[][] mapa;
+    private final int[][] mapa;
     private final int filas;
     private final int columnas;
     
-    public Mapa(char[][] mapa, int filas, int columnas){
+    public Mapa(int[][] mapa, int filas, int columnas){
         this.filas=filas;
         this.columnas=columnas;
         this.mapa=mapa;
     }
 
-    public void getMapa(){
+    public int[][] getMapa(){
         return mapa;
     }
 

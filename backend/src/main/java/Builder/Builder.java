@@ -2,7 +2,6 @@ package Builder;
 
 
 public interface Builder {
-    void mostrarMapa();
     void setTamaño(int filas, int columnas);
     void setVillano();
     void setZonaContaminada(int cant);

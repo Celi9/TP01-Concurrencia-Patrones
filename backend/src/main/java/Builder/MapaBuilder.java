@@ -7,18 +7,20 @@ import java.util.Random;
 // 3 = Pozo
 // 4 = Tesoro
 // 5 = Obstaculo, no deja pasar al personaje por esa celda, no resta puntos de vida
+// 6 = Personaje para indicar donde comienza
 
 public class MapaBuilder implements Builder{
-    private final char[][] mapa;
-    private final int filas;
-    private final int columnas;
-    private final Random random = new Random();
+    private int[][] mapa;
+    private int filas;
+    private int columnas;
+    private Random random = new Random();
 
     @Override
     public void setTamaño(int filas, int columnas){
-        this.filas=builder.filas;
-        this.columnas=builder.columnas;
-        this.mapa = new char[filas][columnas];
+        this.filas=filas;
+        this.columnas=columnas;
+        this.mapa = new int[filas][columnas];
+        this.mapa[0][0]=6;
     }
 
     @Override
@@ -47,6 +49,7 @@ public class MapaBuilder implements Builder{
         }
     }
 
+    @Override
     public void setObstaculos(int cant){
         for(int i = 0; i<cant ; i++){
             ubicarElemento(5);
@@ -63,7 +66,9 @@ public class MapaBuilder implements Builder{
         do{
             f = random.nextInt(filas);
             c = random.nextInt(columnas);
-        }while(mapa[f][c]!=0 && f!=0 && c!=0);
+        }while(mapa[f][c]!=0);
         mapa[f][c]=elto;
     }
+
+    
 }
