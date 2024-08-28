@@ -15,6 +15,14 @@ public class Mapa {
         return mapa;
     }
 
+    public int getFilas() {
+        return filas;
+    }
+
+    public int getColumnas() {
+        return columnas;
+    }
+
     public void mostrarMapa() {
         for (int i = 0; i < filas; i++) {
             for (int j = 0; j < columnas; j++) {
