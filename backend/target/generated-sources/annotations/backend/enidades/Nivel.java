@@ -1,6 +1,6 @@
 package backend.enidades;
 
-import Builder.Builder;
+import backend.Builder.Builder;
 
 public class Nivel {
     public void nivelFacil(Builder builder) {

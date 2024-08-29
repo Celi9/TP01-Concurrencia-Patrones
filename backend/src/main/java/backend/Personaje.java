@@ -1,3 +1,4 @@
+package backend;
 public class Personaje {
    private int vida;
    private int[] posicion; 

@@ -1,26 +1,35 @@
-package backend.enidades;
+package backend.entidades;
+
+import java.awt.Color;
+import java.awt.Font;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
-import backend.entidades.Juego;
-import backend.entidades.Main;
-import backend.entidades.Personaje;
-import backend.entidades.configuracion;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.Graphics;
 
+import javax.swing.JLabel;
+
+import backend.Builder.Mapa;
+import backend.entidades.Juego;
+import backend.entidades.Main;
+import backend.entidades.Configuracion;
+
 public class Main extends JPanel {
-    configuracion config = new configuracion();
-    static Mapa mapa = configuracion.configurarjuego();
+    static Configuracion config = new Configuracion();
+    static Mapa mapa = config.configurarjuego();
     Juego juego = new Juego(mapa);
     Personaje personaje = new Personaje(mapa);
 
     public void paint(Graphics grafico) {
         juego.paint(grafico);
         personaje.paint(grafico);
+    }
+
+    public boolean verificarFin(){
+        return personaje.fin();
     }
 
     public Main() {
@@ -57,11 +66,12 @@ public class Main extends JPanel {
 
         while (true) {
             try {
-                Thread.sleep(10);
+                Thread.sleep(20);
             } catch (InterruptedException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
+            System.out.println("Fin:"+game.verificarFin());
             game.repaint();
         }
     }

@@ -1,4 +1,4 @@
-package Builder;
+package backend.Builder;
 
 public class Mapa {
     private final int[][] mapa;
@@ -13,6 +13,14 @@ public class Mapa {
 
     public int[][] getMapa(){
         return mapa;
+    }
+
+    public int getFilas() {
+        return filas;
+    }
+
+    public int getColumnas() {
+        return columnas;
     }
 
     public void mostrarMapa(){
