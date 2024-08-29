@@ -41,6 +41,7 @@ public class Personaje {
             case 37: // izquierda
                 // verificarCelda(plano[x/40-1][y/40],x-movimiento); //implementar
                 // verificarCelda
+
                 x = x - movimiento;
                 break;
             case 39: // derecha

@@ -5,6 +5,9 @@ import javax.swing.JPanel;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 import java.awt.Graphics;
 
 public class Main extends JPanel {
@@ -42,7 +45,7 @@ public class Main extends JPanel {
 
     public static void main(String[] args) {
 
-        Main game = new Main();
+        final Main game = new Main();
         JFrame ventana = new JFrame("Juego");
         ventana.add(game);
         ventana.setSize(mapa.getFilas() * 43, mapa.getColumnas() * 43);
@@ -50,14 +53,21 @@ public class Main extends JPanel {
         ventana.setVisible(true);
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        while (true) {
-            try {
-                Thread.sleep(10);
-            } catch (InterruptedException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
+        ScheduledExecutorService executor = Executors.newSingleThreadScheduledExecutor();
+        executor.scheduleAtFixedRate(() -> {
             game.repaint();
-        }
+        }, 1, 10, TimeUnit.MILLISECONDS);
+
+        /*
+         * while (true) {
+         * try {
+         * Thread.sleep(10);
+         * } catch (InterruptedException e) {
+         * // TODO Auto-generated catch block
+         * e.printStackTrace();
+         * }
+         * game.repaint();
+         * }
+         */
     }
 }

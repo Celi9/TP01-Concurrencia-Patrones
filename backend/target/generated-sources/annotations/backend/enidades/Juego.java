@@ -54,6 +54,9 @@ public class Juego {
 						grafico.fillRect(columna * 40, fila * 40, anchoBloque, altoBloque);
 						break;
 					default:
+						grafico.setColor(Color.white);
+						grafico.fillRect(columna * 40, fila * 40, anchoBloque, altoBloque);
+
 						break;
 				}
 			}
