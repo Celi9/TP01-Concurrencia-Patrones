@@ -14,6 +14,7 @@ public class Personaje {
     private final int ancho = 40;
     private final int alto = 40;
     private final int movimiento = 40;
+    private int vidas = 3;
 
     public Personaje(Mapa mapa) {
         plano = mapa.getMapa();
@@ -55,6 +56,7 @@ public class Personaje {
                 // verificarCelda
 
                 y = y + movimiento;
+                System.out.println("abajo");
                 break;
             case 38: // arriba
                 // verificarCelda(plano[x/40][y/40+1], x - movimiento); // implementar
